@@ -1,0 +1,23 @@
+
+<div class="list-menu">
+  <ng-container *ngFor="let lista of lists; let id = index" >
+
+    <mat-card>
+      <mat-card-title>
+        {{ lista.titulo }}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{ lista.descripcion }}
+      </mat-card-subtitle>
+      <mat-card-actions>
+        <button mat-raised-button (click)="verList(id)">Ver lista</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </ng-container>
+
+  <button mat-fab class='mas'>+</button>
+
+  <mat-paginator id='paginator' [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+  </mat-paginator>
+</div>

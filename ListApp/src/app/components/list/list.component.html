@@ -1,0 +1,13 @@
+<h1> {{ this.lists.titulo }} </h1>
+
+<h4> {{ this.lists.descripcion }} </h4>
+
+<mat-progress-bar mode="determinate" value= '0' id='progress'></mat-progress-bar>
+
+<mat-list>
+  <ng-container *ngFor="let item of this.lists.lista">
+    <br />
+    <mat-list-item><mat-checkbox (click)='checking()' > {{ item }} </mat-checkbox></mat-list-item>
+    <mat-divider></mat-divider>
+  </ng-container>
+</mat-list>

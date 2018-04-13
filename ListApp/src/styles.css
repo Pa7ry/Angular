@@ -1,0 +1,50 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body {
+    height: 100vh;
+}
+
+body { 
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+
+a {
+    margin-left: 10px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.container {
+    padding: 25px;
+    height: 82vh;
+}
+
+.list-menu {
+    text-align: center;
+    display: grid;
+    grid-template: 1fr / 10% 1fr 56px 1fr 10%
+}
+
+.mas {
+    font-size: 4rem;
+    margin: 10px;
+    grid-column: 3 / 4;
+}
+
+mat-card { 
+    margin-bottom: 20px;
+    grid-column: 2 / 5;
+}
+
+#paginator {
+    grid-column: 2 / 5;
+    margin-top: 16%;
+}

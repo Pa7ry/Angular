@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>¡Hola {{ nombre }}!</mat-card-title>
+  <mat-card-subtitle>Estás son tus listas:</mat-card-subtitle>
+  <mat-card-content>
+    <mat-table [dataSource]="lists">
+      <ng-container matColumnDef="titulo">
+        <mat-header-cell *matHeaderCellDef> Actuales </mat-header-cell>
+        <mat-cell *matCellDef="let lista"> {{ this.lista.titulo }} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </mat-card-content>
+</mat-card>

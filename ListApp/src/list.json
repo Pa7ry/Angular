@@ -1,0 +1,16 @@
+{
+    "mudanza": {
+        "descripcion": "Cosas que necesito antes de mudarme a mi nueva casa.",
+        "lista": [
+            "ropa", "sábanas", "toallas", "cosas de aseo", "cubiertos", "algún plato más",
+            "medir cockpit", "comprar alfombra", "cartas de amor de mi amada novia"
+        ]
+    },
+    "planes": {
+        "descripcion": "Planes divertidos para hacer juntos.",
+        "lista": [
+            "skate", "ir al cine", "ir al VIPS a merendar tortitas", "hacer senderismo", 
+            "coger el hotel", "bajar música para el coche", "salir a correr"
+        ]
+    }
+}
