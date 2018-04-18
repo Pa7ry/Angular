@@ -1,0 +1,28 @@
+.container {
+    margin-top: 5%;
+}
+
+img {
+    border: white 1px solid;
+    border-radius: 5%;
+}
+
+.nombre {
+    align-self: flex-end;
+}
+
+th {
+    vertical-align: middle;
+}
+
+td {
+    vertical-align: middle;    
+}
+
+h3 {
+    margin-top: 15px;
+}
+
+a.btn {
+    border-radius: 5%;
+}

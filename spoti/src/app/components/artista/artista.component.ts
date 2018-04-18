@@ -26,7 +26,7 @@ export class ArtistaComponent implements OnInit {
         this._spoti.getTrak(id).subscribe( canciones=> {
           this.canciones = canciones.tracks;
           console.log(this.canciones); 
-          console.log(this.canciones[0].album.images[0].url)
+          console.log(this.canciones[0].album.images[1].url)
 
         } )
     });

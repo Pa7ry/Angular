@@ -1,6 +1,39 @@
-
-<h1>{{ this.artista.name }}</h1>
-<ul *ngFor='let cancion of canciones'>
-  <li>{{ cancion.album.images[2] }}</li>
-  <li>{{ cancion.name }}</li>
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <ng-container *ngFor='let img of artista.images; let i = index'>
+        <img src="{{ img.url }}" *ngIf='i == 2'>
+      </ng-container>
+    </div>
+    <div class="col-9 nombre">
+      <h2>{{ artista.name }}</h2>
+      <button type="button" class="btn btn-dark" routerLink='/search'>Volver</button>
+      <a class="btn btn-success" href='{{ artista.external_urls.spotify }}'>Ver en Spotify</a>
+    </div>
+  </div>
+  <h3>Canciones más escuchadas</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"></th>
+        <th scope="col">Canción</th>
+        <th scope="col">Álbum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let cancion of canciones; let j = index'>
+        <th scope="row">{{ j + 1 }}</th>
+        <ng-container *ngFor='let img of cancion.album.images; let x = index'>
+          <td *ngIf='x == 2'><img src='{{ img.url }}'></td>
+        </ng-container>
+        <td>{{ this.cancion.name }}</td>
+        <td>{{ cancion.album.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+<!--  <ul *ngFor='let cancion of canciones'>
+    <li>{{ cancion.album.images[2] }}</li>
+    <li>{{ cancion.name }}</li>
+  </ul>-->
+</div>
