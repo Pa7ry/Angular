@@ -7,6 +7,8 @@ import { SpotifyService } from './services/spotify.services';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+import { DomseguroPipe } from './pipes/domseguro.pipe';
+
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { SearchComponent } from './components/search/search.component';
@@ -22,17 +24,11 @@ import { ArtistaComponent } from './components/artista/artista.component';
     HomeComponent,
     SearchComponent,
     PageNotFoundComponent,
-    ArtistaComponent
+    ArtistaComponent,
+    DomseguroPipe
   ],
-  imports: [
-    BrowserModule,
-    APP_ROUTING,
-    HttpClientModule,
-    FormsModule
-  ],
-  providers: [
-    SpotifyService
-  ],
+  imports: [BrowserModule, APP_ROUTING, HttpClientModule, FormsModule],
+  providers: [SpotifyService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

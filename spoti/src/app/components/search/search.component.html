@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-4">
       <label for="buscar"><b>¿Qué artista buscas?</b></label>
-      <input type="text" placeholder="Buscar" (keyup)='buscarArtista()' 
+      <input type="text" placeholder="Buscar" (keyup.enter)='buscarArtista()'
       [(ngModel)]=busqueda class='form-control' maxlength="25">
     </div>
     <div class="col-8" *ngIf="busqueda" >
@@ -11,10 +11,10 @@
       <ul>
         <ng-container *ngFor='let artista of resultados'>
           <ng-container *ngFor='let img of artista.images; let i = index'>
-            <li> 
+            <li>
               <div class="row">
                 <div class="col-3">
-                  <img src='{{ img.url }}' *ngIf='i == 0' class='artist' /> 
+                  <img src='{{ img.url }}' *ngIf='i == 0' class='artist' />
                 </div>
                 <div class="col-9">
                   <a [routerLink]="['/artist', artista.id]" class='artist'> {{ artista.name }} </a>

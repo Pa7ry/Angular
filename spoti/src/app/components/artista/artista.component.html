@@ -19,21 +19,24 @@
         <th scope="col"></th>
         <th scope="col">Canción</th>
         <th scope="col">Álbum</th>
+        <th scope="col">Reproducir</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor='let cancion of canciones; let j = index'>
         <th scope="row">{{ j + 1 }}</th>
         <ng-container *ngFor='let img of cancion.album.images; let x = index'>
-          <td *ngIf='x == 2'><img src='{{ img.url }}'></td>
+          <td *ngIf='x == 2'>
+            <img [src]='img.url'>
+          </td>
         </ng-container>
-        <td>{{ this.cancion.name }}</td>
+        <td>{{ cancion.name }}</td>
         <td>{{ cancion.album.name }}</td>
+        <td>
+          <iframe [src]="cancion.uri | domseguro:'https://open.spotify.com/embed?uri='" width="250" height="80" frameborder="0"
+            allowtransparency="true" allow="encrypted-media"></iframe>
+        </td>
       </tr>
     </tbody>
   </table>
-<!--  <ul *ngFor='let cancion of canciones'>
-    <li>{{ cancion.album.images[2] }}</li>
-    <li>{{ cancion.name }}</li>
-  </ul>-->
 </div>
